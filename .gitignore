@@ -5,19 +5,12 @@
 .uceditor/
 AGENTS.md
 
-# Generated Silicon Labs files and local SDK copy
-autogen/
-config/
-simplicity_sdk_2025.12.2/
-
 # CMake and compiler build output
-cmake_gcc/
 cmake_gcc/build/
 
 # Generated Doxygen HTML; keep source configuration and optional images
 docs/html/
 docs/latex/
-docs/
 
 # Local generated binaries and maps
 *.bin
@@ -29,8 +22,6 @@ docs/
 *.obj
 
 # Local Simplicity Studio project artifacts
-Question-2.pintool
-Question-2.slcp
 Question-2.slps
 Question-2_project.pdf
 vscode.conf
