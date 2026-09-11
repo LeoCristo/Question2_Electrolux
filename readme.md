@@ -106,7 +106,27 @@ The following capture shows the firmware running on the EFR32 board. It demonstr
 
 ## Documentation
 
-The public functions are documented with Doxygen-style comments directly in the source and header files, using tags such as `@brief`, `@param`, and `@return`. The source comments are the documentation reference for this project.
+The public functions are documented with Doxygen-style comments directly in the source and header files, using tags such as `@brief`, `@param`, and `@return`.
+
+To generate HTML documentation locally, create a Doxyfile with:
+
+```powershell
+doxygen -g Doxyfile
+```
+
+Then configure the input files and generate the documentation with:
+
+```powershell
+doxygen Doxyfile
+```
+
+The generated documentation is available at:
+
+```text
+docs/html/index.html
+```
+
+The `Doxyfile` is intentionally not included in this repository. It is only a local configuration file used to generate the optional documentation.
 
 ## Build
 
