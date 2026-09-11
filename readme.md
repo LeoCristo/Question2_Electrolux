@@ -14,10 +14,12 @@ The folders `autogen/`, `config/`, `simplicity_sdk_2025.12.2/`, and `cmake_gcc/`
 
 ## Solution
 
+The original question requires only a microcontroller, a button, button-state detection, press-duration measurement, and the following state machine. The LED and serial output are optional additions used in this project for visual feedback and debugging; they are not required by the question.
+
 The firmware is written in C and implements the required states:
 
-- `OFF`: the button is released and the LED is off;
-- `ON`: the button is pressed and the LED is on;
+- `OFF`: the button is released;
+- `ON`: the button is pressed;
 - `PROTECTED`: the button was released and the system waits 10 seconds before returning to `OFF`.
 
 The firmware also measures how long the button remains pressed. The timing is non-blocking and uses the Silicon Labs Sleep Timer.
@@ -26,13 +28,13 @@ The firmware also measures how long the button remains pressed. The timing is no
 
 The target device is the **EFR32MG24B310F1536IM48**, configured with Simplicity Studio and the Silicon Labs Gecko SDK.
 
-The project uses:
+The project uses the following hardware. Only the button and microcontroller are required by the original question:
 
 - the board push button on `PB2`;
-- an external LED on `PD2`;
-- VCOM/EUSART for debug logs.
+- an external LED on `PD2` for visual debugging;
+- VCOM/EUSART for debug logs only.
 
-The button uses a pull-up input, so `0` means pressed and `1` means released. The LED is active-low, so `0` turns it on and `1` turns it off.
+The button uses a pull-up input, so `0` means pressed and `1` means released. The LED is active-low, so `0` turns it on and `1` turns it off. The LED implementation can be removed without changing the state-machine behavior.
 
 ![EFR32MG24 board](docs/images/docs/images/placa-efr32mg24.jpg)
 
@@ -53,7 +55,7 @@ BUTTON_STATE_OFF
 
 ![Button state machine](docs/images/docs/images/button-fsm.png)
 
-In `BUTTON_STATE_OFF`, a debounced press stores the start time, turns on the LED, and changes to `BUTTON_STATE_ON`.
+In `BUTTON_STATE_OFF`, a debounced press stores the start time and changes to `BUTTON_STATE_ON`. In this implementation, the LED is also turned on as optional visual feedback.
 
 In `BUTTON_STATE_ON`, the press duration is calculated as:
 
@@ -63,7 +65,7 @@ current_time_ms - press_start_time_ms
 
 When the button is released, the firmware stores the release time and changes to `BUTTON_STATE_PROTECTED`.
 
-In `BUTTON_STATE_PROTECTED`, the LED remains on for 10 seconds. After the timeout, the firmware returns to `BUTTON_STATE_OFF` and turns off the LED.
+In `BUTTON_STATE_PROTECTED`, the firmware waits for 10 seconds. In this implementation, the LED remains on during this period. After the timeout, the firmware returns to `BUTTON_STATE_OFF` and turns off the LED.
 
 ## Debounce and Timer
 
