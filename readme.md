@@ -98,6 +98,12 @@ They are additional platform libraries and configuration, not the main state-mac
 
 `app_log_info()` and `app_log_error()` are used only to observe startup, state transitions, press duration, and timeout completion through VCOM/EUSART. The serial configuration is `115200 8N1` with no flow control.
 
+### Serial Monitor Output
+
+The following capture shows the firmware running on the EFR32 board. It demonstrates the `OFF -> ON`, `ON -> PROTECTED`, and `PROTECTED -> OFF` transitions, including the measured button press duration and the 10-second protection timeout.
+
+![Serial monitor output](docs/images/serial-monitor.png)
+
 ## Documentation
 
 The functions are documented with Doxygen comments in the source and header files. The existing `Doxyfile` generates HTML documentation with:
