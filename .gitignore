@@ -3,6 +3,7 @@
 .projectlinkstore
 .silabsExtContext
 .uceditor/
+AGENTS.md
 
 # Generated Silicon Labs files and local SDK copy
 autogen/
@@ -16,6 +17,7 @@ cmake_gcc/build/
 # Generated Doxygen HTML; keep source configuration and optional images
 docs/html/
 docs/latex/
+docs/
 
 # Local generated binaries and maps
 *.bin
