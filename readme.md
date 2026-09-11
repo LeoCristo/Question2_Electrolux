@@ -106,6 +106,12 @@ The following capture shows the firmware running on the EFR32 board. It demonstr
 
 ![Serial monitor output](docs/images/serial-monitor.png)
 
+### Complete Hardware Demonstration
+
+The following animation can show the complete debug demonstration: pressing the MCU button, the state transition in the serial monitor, and the LED response. The LED and serial output are optional debug aids; the required behavior is the button state machine and its timing.
+
+![Button, serial, and LED demonstration](docs/images/button-serial-led-demo.gif)
+
 ## Documentation
 
 The public functions are documented with Doxygen-style comments directly in the source and header files, using tags such as `@brief`, `@param`, and `@return`.
