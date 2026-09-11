@@ -22,6 +22,7 @@ docs/latex/
 *.obj
 
 # Local Simplicity Studio project artifacts
+Question-2.pintool
 Question-2.slps
 Question-2_project.pdf
 vscode.conf
