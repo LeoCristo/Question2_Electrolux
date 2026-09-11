@@ -1,0 +1,4 @@
+C:/Users/leo-computador/SimplicityStudio/v6_workspace/Question-2/cmake_gcc/build/CMakeFiles/slc.dir
+C:/Users/leo-computador/SimplicityStudio/v6_workspace/Question-2/cmake_gcc/build/CMakeFiles/Question-2.dir
+C:/Users/leo-computador/SimplicityStudio/v6_workspace/Question-2/cmake_gcc/build/CMakeFiles/edit_cache.dir
+C:/Users/leo-computador/SimplicityStudio/v6_workspace/Question-2/cmake_gcc/build/CMakeFiles/rebuild_cache.dir
