@@ -130,9 +130,9 @@ Start-Process docs/html/index.html
 
 ### Documentation Example
 
-Insert an image showing the generated documentation interface here.
+The generated documentation interface is shown below. It lists the documented project files and provides navigation to their functions, enumerations, and source details.
 
-Suggested file: `docs/images/doxygen-example.png`.
+![Doxygen documentation example](docs/images/doxygen-example.png)
 
 To generate HTML documentation locally, create a Doxyfile with:
 
