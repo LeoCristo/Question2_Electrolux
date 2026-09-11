@@ -1,0 +1,26 @@
+# Local IDE and Simplicity Studio metadata
+.projectchecksums
+.projectlinkstore
+.silabsExtContext
+.uceditor/
+
+# Generated Silicon Labs files and local SDK copy
+autogen/
+config/
+simplicity_sdk_2025.12.2/
+
+# CMake and compiler build output
+cmake_gcc/build/
+
+# Generated Doxygen HTML; keep source configuration and optional images
+docs/html/
+docs/latex/
+
+# Local generated binaries and maps
+*.bin
+*.hex
+*.map
+*.out
+*.s37
+*.o
+*.obj
