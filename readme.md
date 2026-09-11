@@ -116,6 +116,24 @@ The following animation can show the complete debug demonstration: pressing the 
 
 The public functions are documented with Doxygen-style comments directly in the source and header files, using tags such as `@brief`, `@param`, and `@return`.
 
+The generated HTML documentation is included in this repository. To view it, open the following file in a web browser:
+
+```text
+docs/html/index.html
+```
+
+From PowerShell, it can be opened with:
+
+```powershell
+Start-Process docs/html/index.html
+```
+
+### Documentation Example
+
+Insert an image showing the generated documentation interface here.
+
+Suggested file: `docs/images/doxygen-example.png`.
+
 To generate HTML documentation locally, create a Doxyfile with:
 
 ```powershell
